@@ -45,13 +45,16 @@ input {
     align-items: start;
 }
 
+.sidebar-stack {
+    display: grid;
+    gap: 12px;
+    align-self: start;
+}
+
 /* ── Sidebar ─────────────────────────────────────────── */
 
-.sidebar {
-    position: sticky;
-    top: 24px;
-    max-height: calc(100vh - 48px);
-    overflow-y: auto;
+.sidebar,
+.sidebar-panel {
     background: rgba(255, 252, 247, 0.84);
     border: 1px solid rgba(103, 61, 40, 0.12);
     border-radius: 20px;
@@ -105,6 +108,22 @@ input {
     font-size: 0.78rem;
     color: #7e6754;
     line-height: 1.4;
+}
+
+.sidebar-text {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #7e6754;
+    line-height: 1.45;
+}
+
+.sidebar-text + .sidebar-text {
+    margin-top: 8px;
+}
+
+.sidebar-text a {
+    color: #734229;
+    word-break: break-all;
 }
 
 /* ── Main panels ─────────────────────────────────────── */
@@ -311,11 +330,11 @@ tbody tr:last-child td {
         grid-template-columns: 1fr;
     }
 
-    .sidebar {
+    .sidebar-stack {
         position: static;
         max-height: none;
+        overflow-y: visible;
     }
-
     .panel {
         padding: 18px;
         border-radius: 16px;

@@ -81,14 +81,32 @@ if (!app) {
 
 app.innerHTML = `
   <main class="page">
-    <aside class="sidebar">
-      <h2 class="sidebar-title">食谱一览</h2>
-      ${sidebarHTML}
-    </aside>
+    <div class="sidebar-stack">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">寒食食谱</h2>
+        ${sidebarHTML}
+      </aside>
+
+      <aside class="sidebar-panel">
+        <p class="sidebar-text">
+          作者：
+          <a href="https://github.com/Yousa-Mirage" target="_blank" rel="noreferrer">
+          天然純真
+          </a>
+        </p>
+        <p class="sidebar-text">
+          开源地址：
+          <a href="https://github.com/Yousa-Mirage/naruto-hanshi" target="_blank" rel="noreferrer">
+            https://github.com/Yousa-Mirage/naruto-hanshi
+          </a>
+        </p>
+        <p class="sidebar-text">食谱信息来自网络社群</p>
+      </aside>
+    </div>
 
     <div class="content">
       <section class="panel hero">
-        <h1>《火影忍者Online》寒食春宴计算器</h1>
+        <h1>《火影忍者Online》寒食春宴计算器（2026.4.3）</h1>
         <p class="intro">输入现有食材数量，计算最大化星辉券的制作方案。每份食物等于 10 个星辉券。</p>
         <p class="note">已排除：清明馃（不产出星辉券）、青精饭（不产出星辉券）、子推燕（被寒食浆严格支配）。</p>
       </section>
@@ -243,7 +261,9 @@ form.addEventListener("click", (event) => {
   }
 
   const control = button.closest(".number-control");
-  const input = control?.querySelector<HTMLInputElement>('input[type="number"]');
+  const input = control?.querySelector<HTMLInputElement>(
+    'input[type="number"]',
+  );
   if (!input) {
     return;
   }
