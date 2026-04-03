@@ -334,6 +334,7 @@ tbody tr:last-child td {
         position: static;
         max-height: none;
         overflow-y: visible;
+        order: 1;
     }
     .panel {
         padding: 18px;
