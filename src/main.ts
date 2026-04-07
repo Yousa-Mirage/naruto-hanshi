@@ -45,7 +45,7 @@ const allRecipesForSidebar: SidebarRecipe[] = [
     label: "子推燕",
     ingredients: "糖×2 · 水×3 · 面粉×5",
     excluded: true,
-    excludeReason: "被支配",
+    excludeReason: "被严格支配",
   },
   {
     label: "青精饭",
