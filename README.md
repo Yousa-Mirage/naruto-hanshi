@@ -46,3 +46,14 @@
 - 每种食材的剩余数量
 
 使用 [`YALPS`](https://github.com/IanManske/YALPS) 库在前端进行规划求解计算。
+
+## 本地运行
+
+首先需要安装 npm，然后运行以下命令启动本地服务：
+
+```bash
+git clone https://github.com/Yousa-Mirage/naruto-hanshi.git
+cd naruto-hanshi
+npm install
+npm run dev
+```
