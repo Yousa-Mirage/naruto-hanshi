@@ -106,7 +106,10 @@ app.innerHTML = `
 
     <div class="content">
       <section class="panel hero">
-        <h1>《火影忍者Online》寒食春宴计算器（2026.4.3）</h1>
+        <h1>《火影忍者Online》寒食春宴计算器（2026 年）</h1>
+        <p style="color: #ff0000; font-weight: 700; font-size: 1.1em;">
+          今年活动已结束，明年会继续更新！
+        </p>
         <p class="intro">输入现有食材数量，计算最大化星辉券的制作方案。每份食物等于 10 个星辉券。</p>
         <p class="note">已排除：清明馃（不产出星辉券）、青精饭（不产出星辉券）、子推燕（被寒食浆严格支配）。</p>
       </section>
